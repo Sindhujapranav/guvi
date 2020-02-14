@@ -1,0 +1,11 @@
+#  program to print all natural numbers from n to 1 using while and function
+
+def rev_natural():
+    chen=int(input("Enter your value:"))
+    i=chen
+    print("The list of natural numbers are:")
+    while(i>=1):
+        print(i, end='')
+        i=i-1
+    return(i)
+rev_natural()

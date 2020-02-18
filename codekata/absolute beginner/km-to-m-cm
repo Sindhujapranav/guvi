@@ -1,0 +1,8 @@
+#gets kilometers as the input from the user
+A=int(input())
+#kilometers to meters
+B=1000*A
+#kilometers to centimeters
+C=100000*A
+print(B)
+print(C)

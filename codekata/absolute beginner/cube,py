@@ -1,0 +1,7 @@
+
+# getting input as zec from user
+zec=int(input())
+#calculating the cube value
+cubicval=zec**3
+print(cubicval)
+

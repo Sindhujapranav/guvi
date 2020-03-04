@@ -1,0 +1,12 @@
+A,B,C=input().split()
+A,B,C=[int(A),int(B),int(c)]
+if((A+B)>C):
+    if((B+C)>A):
+        if((C+A)>B):
+            print("yes")
+        else:
+            print("no")
+    else:
+        print("no")
+else:
+    print("no")

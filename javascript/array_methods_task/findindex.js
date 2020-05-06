@@ -1,24 +1,22 @@
-//using findIndex() function
+const readline=require('readline');
+const inp=readline.createInterface({
+  input:process.stdin});
+const n=[];
+inp.on("line",(data)=>{
+  n.push(data);});
+inp.on("close",()=>{
+var a=n[0].split(" ").map(x=>+x)
+var arr=n[1].split(" ").map(x=>+x);
+var b;
+console.log(arr);
+  function index(b){
+      for(var i=0;i<arr.length;i++){
+          if(b===arr[i]){
+              break;
+          }
+      }
+      return i;
+  }
+  console.log(index(2));
+});
 
-var ages = [3, 10, 18, 20];
-
-function checkAdult(age) {
-  return age >= 18;
-}
-
-function myFunction() {
-  console.log(ages.findIndex(checkAdult));
-}
-
-
-//without using findIndex() function
-
-var ages = [3, 10, 18, 20];
-var age=[]
-for(i=0;i<ages.length;i++){
-    if(ages[i]>=18)
-    {
-     age.push(i)
-    }
-}
-console.log(age[0])

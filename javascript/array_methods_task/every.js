@@ -15,7 +15,7 @@ console.log(arr.every(positive));
 var con=[];
 for(var i=0;i<arr.length;i++){
  if(arr[i] >= 18){
-     con.push(ages[i])
+     con.push(arr[i])
  }
 }
 if((con.length)==(arr.length)){

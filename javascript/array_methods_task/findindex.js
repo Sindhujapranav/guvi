@@ -1,22 +1,12 @@
-const readline=require('readline');
-const inp=readline.createInterface({
-  input:process.stdin});
-const n=[];
-inp.on("line",(data)=>{
-  n.push(data);});
-inp.on("close",()=>{
-var a=n[0].split(" ").map(x=>+x)
-var arr=n[1].split(" ").map(x=>+x);
-var b;
-console.log(arr);
-  function index(b){
-      for(var i=0;i<arr.length;i++){
-          if(b===arr[i]){
-              break;
-          }
-      }
-      return i;
+const findindex1 = [1,2,3].includes(2)
+const includes = (array, value) => {
+  var index=-1
+  for (let i=0; i < array.length; i++){
+    index+=1;
+    if(array[i] === value){
+   return index
+    }
   }
-  console.log(index(2));
-});
-
+  return -1
+}
+includes([1,2,3], 2)

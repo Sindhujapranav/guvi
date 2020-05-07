@@ -1,27 +1,15 @@
-const readline=require('readline');
-const inp=readline.createInterface({
-  input:process.stdin});
-const n=[];
-inp.on("line",(data)=>{
-  n.push(data);});
-inp.on("close",()=>{
-var a=n[0].split(" ").map(x=>+x)
-var arr=n[1].split(" ").map(x=>+x);
-console.log(arr);
-//every()
-const positive=(currentValue) => currentValue >= 1;
-console.log(arr.every(positive));
-// without using every
-var con=[];
-for(var i=0;i<arr.length;i++){
- if(arr[i] >= 18){
-     con.push(arr[i])
- }
+const every1=(array,callback)=>{
+var count=0;
+    for(let i=0;i<array.length;i++)
+    {
+      if(callback(array[i]))
+         {count+=1;}
+if(count==array.length)
+{return true;}
+else
+{return false;}
+} 
 }
-if((con.length)==(arr.length)){
-  console.log("true")
-}
-else{
-    console.log("false")
-}
-});
+const condition=(x)=> x>18;
+const input=[10,50,70]
+console.log(every1(input,condition)); 

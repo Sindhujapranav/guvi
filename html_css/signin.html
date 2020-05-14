@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+  height:100%;
+  width:100%
+} 
+.bot{
+  height:40%;
+  width:100%
+  position:fixed;
+  }
+.split {
+  height:60%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: lightskyblue;
+}
+
+.right {
+  right: 0;
+  background-color: lightskyblue;
+}
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  align-content: justify;
+}
+.pbutton{
+  background-color: #4CAF50;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button {
+  background-color:lightskyblue;
+  border: none;
+  color: white;
+  padding: 16px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color:lightskyblue; 
+  color: white; 
+  border: 1px lightskyblue;
+}
+
+.button1:hover {
+  background-color:lightskyblue;
+  color: white;
+}
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 60%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width:250px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.styles{
+  width: 200px;
+  padding:10px 10px;
+  margin: 10px ;
+  border: 2px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+    }
+
+</style>
+</head>
+<body>
+<div>
+<div>
+<div class="split left">
+  <div class="centered">
+   <div><br><br><br><br>
+   <p><h4>Landing</p>
+   <br><br>
+   <p><h1>Fly makes you</h1></p>
+   <p><h1>faster</h1></p>
+   <p><h5>New free templates by uicookies.com. For more<h5></p>
+   <p>templates visit the site. Lorem ipsum dolor sit amet.</p>
+   <p>consecutur adispisicing elit.</p></div>
+   <input type="button" class="pbutton" value="SEE PRICING">
+  </div>
+  </div>
+</div>
+
+<div class="split right">
+<div class="btn-group">
+  <button class="button">Home</button>
+  <button class="button">Features</button>
+  <button class="button">Reviews</button>
+  <button class="button">Pricing</button>
+  <button class="button">FAQ</button>
+  <button class="button" id="myBtn" onclick="function()">SignIn</button></div><p style="clear:both"><br><p>
+</div>
+<div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..
+    <div><label for="fname"></label>
+    <input type="text" id="fname" name="fname" placeholder="First Name" class="styles"><br><br><br>
+    <input type="text" id="email" name="email" placeholder="Last Name" class="styles"><br><br><br>  
+    
+ <input type="text" id="fname" name="fname" placeholder="Email" class="styles"><br><br><br>
+ <input type="text" id="fname" name="fname" placeholder="Type" class="styles"><br><br><br>
+ <button value="Signed in" onclick="res()" class="styles">Login</button>
+    </p>
+    </p>
+  </div>
+
+<div class="fet">
+<p>FEATURES</p>
+<p>App Features</p>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</div>   
+</body>
+</html>

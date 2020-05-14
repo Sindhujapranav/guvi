@@ -150,52 +150,39 @@ body {
   <button class="button">Reviews</button>
   <button class="button">Pricing</button>
   <button class="button">FAQ</button>
-  <button class="button" id="myBtn" onclick="function()">SignIn</button></div><p style="clear:both"><br><p>
+  <button class="modal button" id="myBtn"id="myModal"onclick="function()">SignIn</button></div><p style="clear:both"><br><p>
 </div>
-<div>
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..
-    <div><label for="fname"></label>
-    <input type="text" id="fname" name="fname" placeholder="First Name" class="styles"><br><br><br>
-    <input type="text" id="email" name="email" placeholder="Last Name" class="styles"><br><br><br>  
-    
- <input type="text" id="fname" name="fname" placeholder="Email" class="styles"><br><br><br>
- <input type="text" id="fname" name="fname" placeholder="Type" class="styles"><br><br><br>
- <button value="Signed in" onclick="res()" class="styles">Login</button>
-    </p>
-    </p>
-  </div>
+
+<div>
+<div id="myModal" class="modal split right">
+<div class="modal-content">
+<span class="close">&times;</span>
+   <div><label for="fname"></label>
+   <input type="text" id="fname" name="fname" placeholder="First Name" class="styles"><br><br><br>
+   <input type="text" id="email" name="email" placeholder="Last Name" class="styles"><br><br><br>  
+   <input type="text" id="fname" name="fname" placeholder="Email" class="styles"><br><br><br>
+   <input type="text" id="fname" name="fname" placeholder="Type" class="styles"><br><br><br>
+   <button value="Signed in" onclick="res()" class="styles">Login</button>
+</div>
+</div>
+</div>
 
 <div class="fet">
 <p>FEATURES</p>
 <p>App Features</p>
 </div>
 <script>
-// Get the modal
+
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+var body = document.getElementsByTagName('body')[0];
+var but = document.createElement('button');
+but.id = 'b1'
+but.style.width = '10%';
+but.style.height = '30px';
+but.innerHTML = 'Generate';
+but.style.align = 'center';
+but.style.radius='8px';
+but.style.backgroundColor = 'green';
+body.appendChild(but);
+var rand = document.createElement('h1');
+rand.style.textAlign = 'center';
+rand.id = 'r';
+body.appendChild(rand);
+
+function random5digit() {
+    var arr = [];
+   while(arr.length < 5){
+    var r = Math.floor(Math.random() * 10);
+    if(arr.indexOf(r) === -1) arr.push(r);
+    }
+    document.getElementById("r").innerHTML = arr.join("");
+}
+
+document.getElementById("b1").onclick = random5digit;
+
+</script>
+</body>
+</html>

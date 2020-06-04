@@ -46,4 +46,49 @@ console.log(arr[d]);
 }
 });
 
-//
+//2.6.Return median of two sorted arrays of same size
+var array1 = [1,2,3,4]; 
+var array2 = [5,6,7,8];
+// declare anonymous function with the variable name of medianOf2
+var medianOf2 = function(array1,array2)
+{
+  var array=[...array1,...array2]
+  var med=array.sort();
+  var len=array.length;
+  const mid = Math.ceil(len / 2);
+  return med[mid]
+}
+medianOf2(array1,array2);
+
+
+
+
+
+//2.7. Remove duplicates from an array
+var arr=["sindhu","raja","raja","pranav","hi"];
+//anonymous function to Remove duplicates from an array
+var unique=function removeDup(arr){
+    var array=[...new Set(arr)];
+    return array;
+}
+console.log(unique(arr));
+
+
+//2.8. Rotate an array by k times and return the rotated array
+
+var array=[1,2,3,4,5,6,7];
+//anonymous function to rotate an array
+var shifts=function rotate(array,k){
+    var newArray=[...array],s;
+    for(var i=0;i<k;i++){
+        s=newArray.shift();
+        newArray.push(s);
+    }
+    return newArray;
+}
+console.log(shifts(array,4))
+
+
+
+
+

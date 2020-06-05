@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body id='bdy'>
+<script>
+var body = document.getElementsByTagName('body')[0];
+ body.style.backgroundColor='whitesmoke';
+ var d = document.createElement('div');
+ d.style.marginTop='70px';
+ d.style.marginLeft='630px';
+ body.appendChild(d)
+ var buts= document.createElement("button");
+      buts.id="b1"
+      buts.innerHTML = 'Generate';
+	  buts.style.height='50px';
+	  buts.style.border.radius="50px"
+	  buts.style.width='250px';
+	  buts.style.align="center"
+    buts.style.backgroundColor='green';
+d.appendChild(buts)
+var rand = document.createElement('h1');
+    rand.style.textAlign = 'center';
+    rand.id = 'r';
+body.appendChild(rand);
+
+
+function random5digit() {
+   var arr = [];
+   while(arr.length < 5){
+    var r = Math.floor(Math.random() * 10);
+    if(arr.indexOf(r) === -1) arr.push(r);
+    }
+    document.getElementById("r").innerHTML = arr.join("");
+}
+document.getElementById("b1").onclick = random5digit;
+</script>
+</body>
+</html>
